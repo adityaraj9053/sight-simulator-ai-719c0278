@@ -3,6 +3,7 @@ import { Eye } from "lucide-react";
 import ImageUpload from "@/components/ImageUpload";
 import BlindnessSelector, { BlindnessType } from "@/components/BlindnessSelector";
 import ImageComparison from "@/components/ImageComparison";
+import coneResponseDiagram from "@/assets/cone-response-diagram.jpg";
 
 const Index = () => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -76,9 +77,25 @@ const Index = () => {
           </section>
         )}
 
+        {/* Scientific Diagram */}
+        {!uploadedImage && (
+          <section className="mt-16">
+            <div className="max-w-5xl mx-auto">
+              <h3 className="text-2xl font-semibold text-center mb-6">Understanding Cone Response</h3>
+              <div className="rounded-lg overflow-hidden border bg-card shadow-lg">
+                <img 
+                  src={coneResponseDiagram} 
+                  alt="Ophthalmic Signal Processing - Cone Response Before and After Correction diagram showing L, M, and S cone cells"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Educational Note */}
         {!uploadedImage && (
-          <section className="mt-16 text-center">
+          <section className="mt-12 text-center">
             <div className="inline-block p-6 rounded-lg bg-muted/50 max-w-2xl">
               <h3 className="font-semibold mb-2">About Color Blindness</h3>
               <p className="text-sm text-muted-foreground">
