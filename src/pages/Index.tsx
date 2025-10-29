@@ -3,7 +3,7 @@ import { Eye } from "lucide-react";
 import ImageUpload from "@/components/ImageUpload";
 import BlindnessSelector, { BlindnessType } from "@/components/BlindnessSelector";
 import ImageComparison from "@/components/ImageComparison";
-import coneResponseDiagram from "@/assets/cone-response-diagram.jpg";
+import coneResponseDiagram from "@/assets/cone-response-diagram.svg";
 
 const Index = () => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -81,12 +81,14 @@ const Index = () => {
         {!uploadedImage && (
           <section className="mt-16">
             <div className="max-w-5xl mx-auto">
-              <h3 className="text-2xl font-semibold text-center mb-6">Understanding Cone Response</h3>
+              <h3 className="text-2xl font-semibold text-center mb-6">Ophthalmic Signal Processing – Cone Response Before and After Correction</h3>
               <div className="rounded-lg overflow-hidden border bg-card shadow-lg">
                 <img 
                   src={coneResponseDiagram} 
-                  alt="Ophthalmic Signal Processing - Cone Response Before and After Correction diagram showing L, M, and S cone cells"
+                  alt="Ophthalmic Signal Processing – Cone Response Before and After Correction diagram showing L, M, and S cone cells"
                   className="w-full h-auto"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
