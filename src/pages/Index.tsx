@@ -78,8 +78,8 @@ const Index = () => {
         )}
 
         {/* Scientific Diagram */}
-        {!uploadedImage && (
-          <section className="mt-16">
+        {uploadedImage && selectedBlindness && (
+          <section className="mt-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="max-w-5xl mx-auto">
               <h3 className="text-2xl font-semibold text-center mb-6">Ophthalmic Signal Processing – Cone Response Before and After Correction</h3>
               <div className="rounded-lg overflow-hidden border bg-card shadow-lg">
