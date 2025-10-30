@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Eye } from "lucide-react";
+import { Eye, TestTube2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import ImageUpload from "@/components/ImageUpload";
 import BlindnessSelector, { BlindnessType } from "@/components/BlindnessSelector";
 import ImageComparison from "@/components/ImageComparison";
@@ -42,10 +44,17 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-4">
             Visualize Color Vision Deficiencies
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
             Upload an image and simulate how it appears to individuals with different types of color blindness.
             This diagnostic tool helps designers, developers, and medical professionals understand color accessibility.
           </p>
+          
+          <Link to="/color-vision-test">
+            <Button size="lg" className="gap-2">
+              <TestTube2 className="h-5 w-5" />
+              Take the Color Vision Test
+            </Button>
+          </Link>
         </section>
 
         {/* Upload Section */}
